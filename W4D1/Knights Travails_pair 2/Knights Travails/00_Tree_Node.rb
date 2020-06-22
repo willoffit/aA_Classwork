@@ -10,21 +10,21 @@ class PolyTreeNode
                         
     def parent=(new_node) ### instance1.parent=(new_node) new_node 
       if new_node.nil?
-        @parent = nil 
+         @parent = nil 
       elsif self.parent.nil?
-        @parent = new_node
-        @parent.children.delete(self)
-        @parent.children << self
+         @parent = new_node
+         @parent.children.delete(self)
+         @parent.children << self
       else
         self.parent.children.delete(self)
-        @parent = new_node
-        @parent.children << self
+         @parent = new_node
+         @parent.children << self
       end
     end 
 
     def add_child(child_node)
-        @children << child_node 
-        child_node.parent = self 
+         @children << child_node 
+         child_node.parent = self 
     end 
 
     def remove_child(child_node) 

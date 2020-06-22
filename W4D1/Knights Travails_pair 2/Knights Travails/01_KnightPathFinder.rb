@@ -1,4 +1,4 @@
-require_relative "./00_Tree_Node.rb"
+require "./00_Tree_Node"
 
 class KnightPathFinder
 
@@ -33,17 +33,27 @@ class KnightPathFinder
         end
     end 
 
-    def find_path 
+    def find_path(end_pos)
+        # path = trace_path_back(end_pos)
+        end_node = @root_node.bfs(end_pos)
+        trace_path_back(end_node)
+    end 
 
+    def trace_path_back(end_node) 
+        trace_values = [end_node] 
+        until trace_values.first == @root_node 
+           trace_values.unshift(trace_values.first.parent)
+        end 
+         trace_values.map(&:value) 
     end 
 
     def new_move_positions(pos)
-      new_moves = KnightPathFinder.valid_moves(pos).reject do |move| 
+        new_moves = KnightPathFinder.valid_moves(pos).reject do |move| 
         @considered_positions.include?(move)
-      end
+        end
 
-      @considered_positions += new_moves
-      new_moves
+        @considered_positions += new_moves
+        new_moves
     end
 
     

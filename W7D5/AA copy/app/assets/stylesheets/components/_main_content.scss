@@ -1,0 +1,48 @@
+.grid a {
+  font-weight: bold;
+}
+.grid .comment{
+  color: #4d82ab;
+}
+.grid .center{
+  text-align: center;
+}
+.grid h2{
+  font-weight: bold;
+}
+
+.grid iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.grid div.author {
+  color: gray;
+  margin: 5px 0 5px 0;
+}
+
+.grid div.opinion-sub {
+  text-transform: uppercase;
+}
+
+.grid ul{
+  list-style: disc;
+}
+
+.grid li{
+  margin: 5px 0 5px 0;
+}
+
+.grid p.small-text {
+  text-align: center;
+  color: gray;
+  font-size: 10px;
+}
+
+.grid .sign-up-main {
+  display: flex;
+}
+
+.grid .sign-up-main input{
+  flex: 1;
+}

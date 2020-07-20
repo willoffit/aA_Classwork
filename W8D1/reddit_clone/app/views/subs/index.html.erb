@@ -1,0 +1,9 @@
+<% unless logged_in? %>
+  <a href=<%= new_session_url %>>Sign in!</a>
+<% end %>
+<h1>All the Subs!</h1>
+  <ul>
+    <% @subs.each do |sub| %>
+      <li><a href=<%= sub_url(sub) %>><%= sub.title %></a></li>
+    <% end %>
+  </ul>

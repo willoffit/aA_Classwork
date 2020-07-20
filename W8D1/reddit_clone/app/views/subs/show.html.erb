@@ -1,0 +1,6 @@
+<h1><%= @sub.title %></h1>
+<h4>Description</h4>
+<p><%= @sub.description %></p>
+<input type="hidden" name="post[sub_id]" value=<%= params[:id] %>>
+<p><a href=<%= new_post_url %>>Make a New Post!</a></p>
+<p><a href=<%= edit_user_sub_url(@sub) %>>Edit</a></p>

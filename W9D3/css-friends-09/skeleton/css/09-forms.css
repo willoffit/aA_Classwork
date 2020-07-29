@@ -1,0 +1,24 @@
+/* PHASE 9: Forms */
+.thumb:focus {
+  display: flex;
+}
+
+.form-group {
+  display: block;
+  background:lightgray;
+  padding: 20px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.form-group > label {
+  font-weight: 1000;
+  display: block;
+}
+
+.form-group p {
+  display: block;
+  border: 1px solid gray;
+  background: white;
+  border-radius: 5px;
+}

@@ -1,0 +1,30 @@
+time {
+  text-align: right;
+  letter-spacing: 1.5px;
+}
+
+.clock {
+  font-family: 'Anton', sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  flex-wrap: wrap;
+  background-color: orange;
+  border: 2px solid black;
+  color: white;
+  margin: 20px;
+  padding: 10px;
+}
+
+.clock > * {
+  flex: 1;
+  flex-basis: 50%;
+}
+
+.tabs {
+}
+
+.tabs-header span {
+  border: 1px solid black;
+  border-radius: 5px;
+}

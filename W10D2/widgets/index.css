@@ -1,0 +1,106 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+  vertical-align: baseline;
+  list-style: none;
+}
+
+body {
+  display: flex;
+  justify-content: space-around;
+}
+
+.clock-title {
+  font-weight: bold;
+  font-size: 25px;
+  margin: 20px 10px 10px 20px;
+  font-family: sans-serif;
+}
+
+.time-and-date {
+  border: 2px solid black;
+  background: orange;
+  color: white;
+  margin: 0px 20px 20px 20px;
+  padding: 10px;
+  font-size: 28px;
+  background-size: cover;
+  width: 500px;
+  height: 100px;
+}
+
+.time, .date {
+  font-family: 'Recursive', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+  align-items: center;
+}
+
+.tab-box {
+  font-family: sans-serif; 
+  padding: 30px;
+  width: 145px;
+}
+
+.tab-box h1 {
+  font-size: 30px;
+  font-weight: 700;
+  padding: 0px 0px 10px 0px;
+}
+
+.tabs {
+  font-size: 20px;
+  width: 145px;
+  background: lightblue;
+}
+
+.tab-header {
+  display: flex;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.tab-header li {
+  border: 2px solid black;
+  border-left: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 2px 5px 2px 5px;
+  margin: 0px;
+}
+
+.tab-header li:first-child {
+  border-left: 2px solid black;
+}
+
+.tab-content {
+  border: 2px solid black;
+  border-top: none;
+  padding: 30px;
+  margin: 0px;
+  width: 84px;
+  color: white;
+  font-weight: 600;
+  background: lightblue;
+  font-family: sans-serif;
+}
+
+.active {
+  border-bottom: none !important;
+}

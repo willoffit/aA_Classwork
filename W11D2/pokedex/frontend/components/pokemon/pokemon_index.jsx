@@ -15,7 +15,7 @@ export default class PokemonIndex extends React.Component {
   render() {
     return (
       <div>
-        <Route path="/pokemon/:pokemonId" component={PokemonDetailContainer}></Route>
+        <Route exact path="/pokemon/:pokemonId" component={PokemonDetailContainer} />
         <section className="pokedex">
           <ul>
             {this.props.pokemon.map((poke) => <PokemonIndexItem poke={poke} key={poke.id} />)}

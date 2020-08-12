@@ -9,10 +9,10 @@ export const receiveAllPokemon = (pokemon) => (
   }
 )
 
-export const receiveOnePokemon = (poke) => (
+export const receiveOnePokemon = (payload) => (
   {
     type: RECEIVE_ONE_POKEMON,
-    poke
+    payload
   }
 )
 

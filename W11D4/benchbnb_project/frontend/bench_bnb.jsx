@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 import { login, signup } from './actions/session_actions';
+import { fetchBenches }  from './actions/bench_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -19,6 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
     store = configureStore();
   }
 
+  window.dispatch = store.dispatch;
+  window.getState = store.getState;
+  window.fetchBenches = fetchBenches;
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={store} />, root);
 });

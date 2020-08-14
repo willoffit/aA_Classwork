@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -8,6 +9,7 @@ class SessionForm extends React.Component {
       password: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.update = this.update.bind(this);
   }
 
   handleSubmit(e) {
@@ -17,32 +19,26 @@ class SessionForm extends React.Component {
   }
 
   header() {
-    if (this.props.formType === 'login') {
-      return (
-        <div>
-          <Link to="/signup">Sign Up</Link>
-          <h1>Log In</h1>
-        </div>
-      )
-    } else if (this.props.formType === 'signup') {
-      return (
-        <div>
-          <Link to="/login">Log In</Link>
-          <h1>Sign Up</h1>
-        </div>
-      )
-    }
+    return (
+      <h1>{this.props.formType}</h1>
+    )
   }
 
   errors() {
     return (
       <ul>
-        {this.props.errors.map((error, idx) => 
+        {this.props.errors.session.map((error, idx) => 
           <li key={idx}>
             {error}
           </li>)}
       </ul>
     )
+  }
+
+  update(field) {
+    return e => this.setState({
+      [field]: e.currentTarget.value
+    });
   }
 
   render() {
@@ -51,10 +47,19 @@ class SessionForm extends React.Component {
         {this.header()}
         {this.errors()}
         <form onSubmit={this.handleSubmit}>
+          <label>Username: 
+            <input type="text" onChange={this.update("username")} value={this.state.username}></input>
+          </label>
+          <label>Password:
+            <input type="password" onChange={this.update("password")} value={this.state.password}></input>
+          </label>
           <button>Submit</button>
         </form>
+        <br></br>
+        {this.props.navLink}
       </div>
     )
   }
-}          
+}   
+       
 export default SessionForm;

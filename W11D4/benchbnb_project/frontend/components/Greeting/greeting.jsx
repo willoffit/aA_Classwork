@@ -12,15 +12,17 @@ class Greeting extends React.Component {
         <div>
           <span>Welcome, {this.props.currentUser.username}</span>
           <button onClick={this.props.logout}>Log Out</button>
+          <h1>Bench BnB</h1>
         </div>
       )
     } else {
-      return (
-        <div> 
-          <Link to="/signup">Sign Up</Link>
-          <Link to="/login">Log In</Link>
-        </div>
-      )
+        return (
+          <div> 
+            <Link to="/signup">Sign Up    </Link>
+            <Link to="/login">Log In</Link>
+            <h1>Bench BnB</h1>
+          </div>
+        )
     } 
   }
 }
